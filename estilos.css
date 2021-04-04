@@ -1,0 +1,535 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: url(images/main2.jpg) rgb(143, 239, 122) top center no-repeat;
+	font-family: miFuente;
+}
+
+/*====ESTRUCTURA====*/
+
+header {
+	height: 100px;
+	background: rgb(247, 153, 46);
+	text-align: center;
+}
+nav {
+	height: 47px;
+	background: rgb(137, 197, 63);
+}
+main {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background: rgb(143, 239, 122);
+	overflow: hidden;
+}
+article {
+	width: 56%;
+	height: 100%;
+	float: left;
+	background: rgba(0, 0, 0, 0.6);
+	padding: 3.5% 5%;
+	overflow: hidden;
+}
+section {
+	width: 92%;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	margin-bottom: 20px;
+	padding: 4% 4% 2% 4%;
+}
+aside {
+	width: 34%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	padding-bottom: 5%;
+}
+footer {
+	height: 70px;
+	background-color: rgb(247, 153, 46);
+	clear: both;
+}
+
+/*====INTRO====*/
+
+#intro {
+	width:100%;
+	height: 100%;
+	overflow: hidden;
+	padding-top: 100px;
+	background-color: rgba(0,10,39,0.3);
+	display: block;
+	justify-content: center;
+	text-align: center;
+	padding-bottom: 200px;
+}
+#parrafo_intro {
+	color: #fff;
+	font-size: 20px;
+	font-family: miFuente;
+	text-align: center;
+	line-height: 28px;
+	text-shadow: 5px 3px 2px #000;
+	width: 90%;
+	padding: 0 5%;
+}
+
+/*====TEXTOS====*/
+
+h1 {
+	color: #fff;
+	font-size: 52px;
+	text-align: center;
+	line-height: 58px;
+	margin-bottom: 10px;
+	text-shadow: 5px 3px 2px #000;
+}
+h2 {
+	color: #fff;
+	font-size: 38px;
+	text-align: center;
+	line-height: 48px;
+	margin-bottom: 20px;
+}
+.naranja{
+	color: rgb(247, 153, 46);
+	font-size: 38px;
+	text-align: left;
+	line-height: 48px;
+	margin-bottom: 20px;
+	text-shadow: #000 6px 6px 6px ;
+
+}
+h3 {
+	color: rgb(251, 157, 31);
+	font-size: 30px;
+	text-align: left;
+	line-height: 38px;
+	margin-bottom: 20px;
+	text-shadow: #000 2px 2px 2px ;
+
+}
+p {
+	color: #fff;
+	font-size: 18px;
+	text-align: left;
+	line-height: 30px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+.txt-section {
+	font-size: .8em;
+	text-align: center;
+	width: 100%;
+	color: rgb(251, 157, 31);
+}
+#text-footer {
+	color: black;
+	font-size: .9em;
+	text-align: center;
+	padding-top: 20px;
+	width: 100%;
+}
+@font-face {
+	font-family: miFuente;
+	src: url(fonts/RobotoSlab-Light.ttf);
+}
+@font-face {
+	font-family: miFuenteRegular;
+	src: url(fonts/Roboto-Regular.ttf);
+}
+
+/*====IMAGENES Y COMENTARIOS DE IMAGENES====*/
+
+figure {
+	width: 100%;
+	margin: 30px 0;
+}
+figcaption {
+	color: #cecece;
+	font-size: 12px;
+	font-family: miFuente;
+	text-align: left;
+	line-height: 18px;
+	margin-top: 8px;
+}
+
+/*====HIPERVINCULOS====*/
+
+a, a:visited {
+	color: red;
+	font-family: miFuenteRegular;
+	text-decoration: none;
+}
+a:hover {
+	color: #3A070C;
+	text-decoration: underline;
+}
+
+/*====BOTONES====*/
+
+a.boton_1, a.boton_1:visited {
+	font-size: 1.2em;
+	border: 1px solid #001C40;
+	color: white;
+  	padding: 15px 40px;
+  	text-decoration: none;
+  	display: inline-block;
+  	text-align: center;
+  	background-color: rgb(247, 153, 46);
+  	cursor: pointer;
+  	clear: both;
+}
+a.boton_1:hover {
+	text-decoration: none;
+	background-color: rgb(137, 197, 63);
+}
+
+
+/*====LISTAS====*/
+ul { /*Espacio de una lista a ordenar, no debe tener espacios por defecto*/
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style-type:none;
+	list-style-position: inside;
+}
+
+/*====MENU SUPERIOR====*/
+ul.topnav {
+	margin: 0;
+	padding: 0;
+	list-style-type:none;
+	overflow: hidden; /*un contenido con valores relativos se pueda ver*/
+	background-color: rgba(o,3,51,0.7);
+	display: flex; /*permite adecuacion del nav a diferentes disp moviles*/
+	justify-content: center;/*centra contenido*/
+}
+ul.topnav li{
+	float: left;
+}
+ul.topnav li a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	padding: 14px 16px; /*el primero es para arriba y abajo y el otro izq y der*/
+}
+ul.topnav li a:hover /*:not(.active)*/{
+	background-color: rgb(247, 153, 46);
+}
+/*ul.topnav li a.active{
+	background-color: #DB0407;
+}
+
+
+/*====MENU LATERAL====*/
+
+aside ul{
+	margin-bottom: 20px;
+}
+aside li a{
+	font-size: 1.2em;
+	color: red;
+	text-decoration: none;
+	display: block;
+	padding: 15px 10%;
+	border-bottom: 1px solid white;
+
+}
+aside li a:visited, aside li a:hover {
+	background-color: black;
+	text-decoration: none;
+
+}
+aside img {
+	padding: 5% 10% 0% 10%;
+	width: 80%;
+}
+li h3 {
+	padding: 24px 0 24px 10%;
+	border-bottom: 1px solid white;
+	margin-bottom: 1px;
+}
+
+/*====DISENHO RESPONSIVE====*/
+
+@media screen and (max-width: 780px) {
+
+	/*===ESTRUCTURA===*/
+	article, figure, p {
+		width: 95%;
+	}
+	article {
+		padding-top: 6%;
+	}
+	section {
+		width: 86%;
+	}
+	/*===INTRO===*/
+	#intro {
+		height: 100%;
+		overflow: hidden;
+		padding-top: 280px;
+		padding-bottom: 20px;
+	}
+	/*===MENU SUPERIOR===*/
+	ul.topnav li {
+		float: none;
+	}
+	ul.topnav {
+		display: block;
+	}
+	/*===MENU LATERAL===*/
+	aside {
+		width: 100%;
+		padding-top: 1%;
+		padding-bottom: 1%;
+	}
+	aside li a {
+		text-align: center;
+		font-size: 1em;
+	}
+	li h3  {
+		padding: 24px 0;
+		text-align: center;
+	}
+	aside img {
+		text-align: center;
+		width: 50%;
+		padding: 0 25% 5% 25%;
+	}
+
+}
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 20%;
+  background-color: rgb(145, 196, 133);
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 60%;
+  background-color: rgba(57, 96, 49,0.7);
+  padding: 20px;
+}
+.main-home {
+  width: 100%;
+  padding: 1% 8%;
+  margin: 0 auto;
+}
+#home {
+	margin:0 auto;
+	width:80%;
+	text-align:center;
+	height:auto;
+	padding-top: 300px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color:rgb(247, 153, 46);
+  width: 100%;
+  padding: 5px;
+}
+.fakeimg > img {
+	width: 100%;
+}
+
+.fakeimg-01 > img {
+	width: 27%;
+	float: left;
+	margin: 15px 10px;
+	background-color: rgb(247, 153, 46);
+	padding: 15px;
+}
+.fakeimg-video {
+  background-color: rgba(31,122,201,0.4);
+  width: 80%;
+  padding: 0.5px 15px;
+	margin: 0 auto;
+}
+/*==============================================CONTADOR=======================================*/
+
+#contador{
+	color: rgb(247, 153, 46);
+	font-size: 25px;
+	margin: 3px solid;
+	font-family: cursive;
+	text-shadow: #000 2px 2px 2px ;
+	margin-bottom: 10px;
+}
+.contador{
+	margin: 0;
+	color: rgb(226, 95, 47);
+	text-shadow: #000 1px 1px 1px;
+	font-size: 20px;
+	font-family: cursive;
+}
+#sombreado , .efect {
+	text-shadow: #000 4px 4px 4px;
+}
+
+.rellenar{
+	background-color: silver;
+	padding: 10px;
+	margin:5px;
+	border: none;
+
+}
+#calcula{
+	border-radius: 15px;
+	padding: 10px;
+	background-color: rgb(247, 153, 46);
+	float: right;
+	margin-right:15px;
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+/*=============================CALCLADORA PRECIOS===============================================*/
+#calcula2{
+	border-radius: 15px;
+	padding: 10px;
+	background-color: rgb(247, 153, 46);
+	float: left;
+	margin-right:15px;
+	margin-bottom: 10px;
+	margin-top: 0px;
+}
+
+/*==============================================NOSOTROS=======================================*/
+#info{
+
+	flex: 60%;
+	background-color: rgba(57, 96, 49,0.7);
+	padding: 20px;
+	height: 1100px;
+
+}
+
+#circulo1 , #circulo2 , #circulo3 , #circulo4 {
+background:  rgb(247, 153, 46);
+width: 180px;
+height: 180px;
+border-radius: 50%;
+margin-left: 11.5%;
+display: inline-block;
+text-align: center;
+
+}
+
+.text-circle{
+	line-height: 180px;
+	font-size: 20px;
+	text-align: center;
+	vertical-align: middle;
+	color: black;
+	text-shadow: white 2px 2px 2px ;
+}
+#resultado{
+	border-radius: 10px;
+	width: 60%;
+	text-align: center;
+	height: 150px;
+	margin-left: 20%;
+	margin-top: 5%;
+	font-size: large;
+	color: blanchedalmond;
+	text-shadow: black 2px 2px 2px ;
+	border: green solid 2px;
+	background-color: rgb(137, 197, 63);
+
+}
+#registro{
+	text-align: center;
+	text-shadow: black 2px 2px 2px ;
+	color: rgb(247, 153, 46);
+	font-size: 40px;
+
+
+}
+.registrando{
+	color: rgb(201, 152, 152);
+	text-shadow: black 2px 2px 2px ;
+	font-size: 25px;
+	margin-left: 200px;
+}
+#subir{
+	border-radius: 20px ;
+	background-color: rgb(221, 245, 115);
+	float: right;
+	padding: 20px;
+	color: #000;
+	text-shadow: rgb(251, 157, 31) 2px 2px 2px;
+	border: #000 solid 3px;
+	margin-right: 250px;
+
+
+}
+#bordes{
+	border: #000 solid -10px;
+}
+div > form > input.reposicionar{
+	margin-left: 200px;
+}
+#consulta{
+	margin-left: 200px;
+	width: 55%;
+	height: 200px;
+	padding: 0px;
+}
+
+
+
+/*===============================================funcion auspiciador=================*/
+#border-type{
+	width: 25%;
+	height: 25%;
+	background: linear-gradient(rgb(251, 157, 31) , rgb(137, 197, 63) );
+	border:  rgb(137, 197, 63) solid 3px;
+	float: left;
+}
+.ajuste-texto{
+	text-align: center;
+	color: #fff;
+	text-shadow: black 2px 2px 2px;
+	font-size: 30px;
+	
+}
+#cambiar{
+	width: 80%;
+	height: 50%;
+	margin: 10%;
+}
+
+/*===============================================funcion de equipo de trabajo=================*/
+
+#border-type2{
+	width: 25%;
+	height: 25%;
+	background: linear-gradient(rgb(251, 157, 31) , rgb(137, 197, 63) );
+	border:  rgb(137, 197, 63) solid 3px;
+	float: right;
+}
+#imgSrc{
+	width: 80%;
+	height: 30%;
+	
+}
+#tabla{
+	width:100%; 
+	height: 10%;
+	background:rgb(247, 153, 46); 
+	margin: auto;
+}

@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Nosotros</title>
+<link rel="stylesheet" href="estilos.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="recurso.js"></script>
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header>
+		<img src="images/logo.jpg" width="180" height="120" >
+	</header>
+	<nav>
+		<ul class="topnav">
+			<li><a href="index.html" class="active">Inicio</a></li>
+			<li><a href="carta.html">Carta</a></li>
+			<li><a href="nosotros.html">Nosotros</a></li>
+			<li><a href="contactanos.html">Contáctanos</a></li>
+
+		</ul>
+	</nav>
+
+	<div id="info">
+
+		<h2 >SOBRE NOSOTROS</h2>
+		<br>
+		<br>
+		<div id="circulo1" onmouseover="escribe(1)" onmouseout="escribe(0)"><p class="text-circle">¿Quiénes somos?</p></div>
+		<div id="circulo2" onmouseover="escribe(2)" onmouseout="escribe(0)"><p class="text-circle">Objetivos</p></div>
+		<div id="circulo3" onmouseover="escribe(3)" onmouseout="escribe(0)"><p class="text-circle">Recomendaciones</p></div>
+		<div id="circulo4" onmouseover="escribe(4)" onmouseout="escribe(0)"><p class="text-circle">Ayuda</p></div>
+
+		<h4 id="resultado">Dirígete a los círculos para descubrir más de nosotros</h4>
+		<br>
+		<br><br>
+		<br>
+		<script>
+			function escribe(info){
+				var pregunta = ["Hola! Dirígete a los círculos para descubrir más de nosotros.",
+				"Somos Health Food, un equipo enfocado en la venta de alimentos previamente estudiados para afirmar su eficiente aporte para la salud, además, de que estos alimentos son deliciosos. ",
+				"Tenemos com objetivo ofrecer a nuestros consumidores alimentos que sean de su agrado, para poder incentivar el consumo de estos alimentos saludables , asi como también promover la actividad física.",
+				"Te recomendamos la practica constante de ejercicios y un buen consumo de alimentos, ya que estos aportan a una mejor salud y bienestar.","Nos preocupamos por ti y nos gustaría que te contactes con nosotros para poder ayudarte ante cualquier problema o consulta."];
+				var texto = document.getElementById("resultado");
+				texto.innerHTML = pregunta[info];
+			}
+		</script>
+		<div id="border-type">
+			<p class="ajuste-texto">Nuestros Auspiciadores</p>
+			<img id="cambiar" src="" />
+
+			<script>
+					document.write('<img src="'+init()+'" width="0" height="0" + border=0></a>');
+		function cambiaFoto(){
+			var i = Math.floor(Math.random()*5);
+			var imagen = "img/" + i + ".jpg";
+			if (i<5){
+				document.getElementById("cambiar").src = imagen;
+			}
+		}
+
+		function init(){
+			setInterval(cambiaFoto,1000); /*Permite que cada cierto tiempo se ejecute una función*/
+
+		}
+
+
+			</script>
+
+
+		</div>
+
+		<div id="border-type2">
+			<p class="ajuste-texto">Equipo de Trabajo</p>
+
+			<img name="imagenSrc" id="imgSrc" alt="Imagenes de la galeria">
+
+		<table id="tabla" cellspacing="0" cellpadding="0" >
+			<tr>
+				<td align="center"><a href="#" onclick="anterior()"> << </a></td>
+				<td align="center"><a href="#" onclick="siguiente()"> >> </a></td>
+			</tr>
+		</table>
+	</div>
+	<script>
+ window.onload = cargarImagenes;
+	var posActual = 0;
+	var Misimagenes = new Array(5);
+				function cargarImagenes(){
+
+
+						Misimagenes[0] = "imagen/admin.jpg";
+						Misimagenes[1] = "imagen/atencion.jpg";
+						Misimagenes[2] = "imagen/cocina.jpg";
+						Misimagenes[3] = "imagen/delivery.jpg";
+						Misimagenes[4] = "imagen/software.jpg";
+
+				document.imgSrc.src = Misimagenes[posActual];
+
+				}
+
+				function anterior(){
+					if (posActual==0){
+					posActual = 4;
+					}
+					else {
+					posActual--;
+					}
+				document.imgSrc.src = Misimagenes[posActual];
+				}
+
+	function siguiente(){
+		if (posActual==4){
+			posActual = 0;
+		}
+		else {
+			posActual++;
+		}
+		document.imgSrc.src = Misimagenes[posActual];
+	}
+
+	</script>
+
+</div>
+
+	<!-- Footer -->
+	<footer>
+		<p id="text-footer">HealthFood All Rights Reserved</p>
+	</footer>
+
+</body>
+</html>

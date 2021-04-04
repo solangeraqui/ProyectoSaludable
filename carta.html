@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Carta </title>
+<link rel="stylesheet" href="estilos.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header>
+		<img src="images/logo.jpg" width="180" height="120" >
+	</header>
+	<nav>
+		<ul class="topnav">
+			<li><a href="index.html" class="active">Inicio</a></li>
+			<li><a href="carta.html">Carta</a></li>
+			<li><a href="nosotros.html">Nosotros</a></li>
+			<li><a href="contactanos.html">Contáctanos</a></li>
+			<script src="funciones.js"></script>
+
+		</ul>
+	</nav>
+
+	<!-- The flexible grid (content) -->
+	<div class="row">
+	  <div class="side">
+		<h2 class="naranja">¡TENEMOS UN CONTADOR DE CALORÍAS PARA TI!</h2>
+		<script type="text/javascript" >
+
+
+
+			function sumar(){
+
+				var plato = document.getElementById("plato").value;
+				var num = document.getElementById("num").value;
+
+				if (plato.toUpperCase()== 'HAMBURGUESA SALUDABLE'){
+					plato=400;
+				}
+
+					else{
+						if(plato.toUpperCase()== 'PIZZA FIT'){
+						plato=300;
+						}
+							else{
+								if(plato.toUpperCase()== 'CARROT CAKE'){
+								plato=300;
+								}
+									else{
+										if(plato.toUpperCase()== 'ENSALADA CON POLLO'){
+										plato=220;
+										}
+											else{
+												if(plato.toUpperCase()== 'GALLETAS DE AVENA'){
+												plato=100;
+												}
+													else{
+														if(plato.toUpperCase()== 'TORTA DE CHOCOLATE FIT'){
+														plato=350;
+														}
+															else{
+																if(plato.toUpperCase()== 'ENSALADA CON HUEVO'){
+																plato=230;
+																}
+																	else{
+																		if(plato.toUpperCase()== 'PANCAKES DE AVENA'){
+																		plato=300;
+																		}
+																			else{
+																				if(plato.toUpperCase()== 'ENSALADA DE FRUTAS'){
+																				plato=300;
+																				}
+																			}
+																	}
+															}
+													}
+											}
+									}
+
+							}
+					}
+
+				var resultado = parseInt(plato) * parseInt(num);
+				alert("La cantidad de calorías es: " + resultado);
+
+				}
+
+			</script>
+			<fieldset>
+			<legend id="contador">Calcula tus calorías</legend>
+
+			<p class="contador">Platillo :</p>  <input type="text" id="plato" class="rellenar" placeholder="Escribe el nombre del platillo "><br><br>
+			<p class="contador">Cantidad :</p> <input type="text" id="num"	class="rellenar" placeholder="Escribe la cantidad de platos "><br><br>
+			<input  id="calcula" type="button"  value="Calcular" onclick=" sumar()">
+
+		</fieldset>
+
+
+
+		<p class="efect">Utiliza nuestro nuevo contador de calorías, te ayudará mucho en cada uno de tus obetivos alimenticios.</p>
+		<h2 class="naranja">La Comida del día es:</h2>
+	    <img src="" id="move">
+	<script>
+	function random_imglink(){
+
+			var myimages=new Array();
+
+			myimages[0]="images/hamburguesa.jpg"
+			myimages[1]="images/pizza.jpg"
+			myimages[2]="images/carrot2.jpg"
+			myimages[3]="images/ensalada.jpg"
+			myimages[4]="images/galleta.jpg"
+			myimages[5]="images/torta2.jpg"
+			myimages[6]="images/ensalada2.jpg"
+			myimages[7]="images/pancakes.jpg"
+			myimages[8]="images/ensaladafrutas.jpg"
+
+			var imagelinks=new Array();
+
+			myimages[0]="images/hamburguesa.jpg"
+			myimages[1]="images/pizza.jpg"
+			myimages[2]="images/carrot2.jpg"
+			myimages[3]="images/ensalada.jpg"
+			myimages[4]="images/galleta.jpg"
+			myimages[5]="images/torta2.jpg"
+			myimages[6]="images/ensalada2.jpg"
+			myimages[7]="images/pancakes.jpg"
+			myimages[8]="images/ensaladafrutas.jpg"
+
+			var ry=Math.floor(Math.random()*myimages.length)
+			if (ry==0)
+			ry=1
+			document.write('<a href='+'"'+imagelinks[ry]+'"target="_blank"'+'><img src="'+myimages[ry]+'" width="400" height="290" + border=0></a>');
+			}
+			random_imglink()
+	</script>
+
+		<h3 id="sombreado">Mira estos ejemplos</h3>
+		<p class="efect">Puedes guiarte de estos ejemplos y consultar con un especialista.</p>
+		<div class="fakeimg"><img src="images/gym.jpg"></div><br>
+		<div class="fakeimg"><img src="images/ejercicios.gif"></div><br>
+
+	  </div>
+	  <div class="main">
+		<center><h2>ENAMÓRATE CON NUESTRA CARTA</h2></center>
+		<h5></h5>
+		<div class="fakeimg-01">
+			<img src="images/hamburguesa.jpg">
+			<img src="images/pizza.jpg">
+			<img src="images/carrot2.jpg">
+			<img src="images/ensalada.jpg">
+			<img src="images/galleta.jpg">
+			<img src="images/torta2.jpg">
+			<img src="images/ensalada2.jpg">
+			<img src="images/pancakes.jpg">
+			<img src="images/ensaladafrutas.jpg">
+
+			<br><br>
+		</div>
+		<div>
+		<p>...Proximamente más...</p><br>
+		<h2>LISTA DE PRECIOS</h2>
+		<button id="calcula2" onclick="mostrarPrecios();">Muestra la lista de Precios</button><br><br><br>
+		<p id="demo"></p>
+</div>
+ <script>
+
+function venta(){
+
+
+	var num =  document.getElementById("cantidad").value;
+	var precio = document.getElementById("numero").value;
+ var numfinal = parseInt(num);
+ var preciofinal = parseInt(precio);
+
+
+	var total = preciofinal * numfinal;
+	alert("El total a pagar es: S/. " + total);
+
+	}
+</script>
+<fieldset>
+<legend id="contador">Calcula tu cuenta</legend>
+
+<p class="contador">Platillo :</p>  <input type="text" id="plato" class="rellenar" placeholder="Escribe el nombre del platillo "><br><br>
+<p class="contador">Cantidad :</p> <input type="text" id="cantidad"	class="rellenar" placeholder="Escribe la cantidad de platos "><br><br>
+<p class="contador">Precio :</p> <input type="text" id="numero"	class="rellenar" placeholder="Escribe la cantidad de platos "><br><br>
+<input  id="calcula2" type="button"  value="Calcular" onclick="venta()">
+
+</fieldset>
+
+
+
+</div> -->
+
+
+	</div>
+
+	  </div>
+
+
+	<!-- Footer -->
+	<footer>
+		<p id="text-footer">HealthFood All Rights Reserved</p>
+	</footer>
+
+</body>
+</html>

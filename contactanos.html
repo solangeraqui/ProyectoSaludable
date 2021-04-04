@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Contáctanos</title>
+<link rel="stylesheet" href="estilos.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+	<!-- Header -->
+	<header>
+		<img src="images/logo.jpg" width="180" height="120" >
+	</header>
+	<nav>
+		<ul class="topnav">
+			<li><a href="index.html" class="active">Inicio</a></li>
+			<li><a href="carta.html">Carta</a></li>
+			<li><a href="nosotros.html">Nosotros</a></li>
+			<li><a href="contactanos.html">Contáctanos</a></li>
+			<script src="funciones.js"></script>
+
+		</ul>
+	</nav>
+
+	<!-- The flexible grid (content) -->
+	<div class="row">
+	  <div class="side">
+		<h2 class="naranja">¡TENEMOS UN CONTADOR DE CALORÍAS PARA TI!</h2>
+		<script type="text/javascript" >
+
+
+
+			function sumar(){
+
+				var plato = document.getElementById("plato").value;
+				var num = document.getElementById("num").value;
+
+				if (plato.toUpperCase()== 'HAMBURGUESA SALUDABLE'){
+					plato=400;
+				}
+
+					else{
+						if(plato.toUpperCase()== 'PIZZA FIT'){
+						plato=300;
+						}
+							else{
+								if(plato.toUpperCase()== 'CARROT CAKE'){
+								plato=300;
+								}
+									else{
+										if(plato.toUpperCase()== 'ENSALADA CON POLLO'){
+										plato=220;
+										}
+											else{
+												if(plato.toUpperCase()== 'GALLETAS DE AVENA'){
+												plato=100;
+												}
+													else{
+														if(plato.toUpperCase()== 'TORTA DE CHOCOLATE FIT'){
+														plato=350;
+														}
+															else{
+																if(plato.toUpperCase()== 'ENSALADA CON HUEVO'){
+																plato=230;
+																}
+																	else{
+																		if(plato.toUpperCase()== 'PANCAKES DE AVENA'){
+																		plato=300;
+																		}
+																			else{
+																				if(plato.toUpperCase()== 'ENSALADA DE FRUTAS'){
+																				plato=300;
+																				}
+																			}
+																	}
+															}
+													}
+											}
+									}
+
+							}
+					}
+
+				var resultado = parseInt(plato) * parseInt(num);
+				alert("La cantidad de calorías es: " + resultado);
+
+				}
+
+			</script>
+			<fieldset>
+			<legend id="contador">Calcula tus calorías</legend>
+
+			<p class="contador">Platillo :</p>  <input type="text" id="plato" class="rellenar" placeholder="Escribe el nombre del platillo "><br><br>
+			<p class="contador">Cantidad :</p> <input type="text" id="num"	class="rellenar" placeholder="Escribe la cantidad de platos "><br><br>
+			<input  id="calcula" type="button"  value="Calcular" onclick=" sumar()">
+
+		</fieldset>
+
+
+
+		<p class="efect">Utiliza nuestro nuevo contador de calorías, te ayudará mucho en cada uno de tus obetivos alimenticios.</p>
+		<h3 id="sombreado">Mira estos ejemplos</h3>
+		<p class="efect">Puedes guiarte de estos ejemplos y consultar con un especialista.</p>
+		<div class="fakeimg"><img src="images/gym.jpg"></div><br>
+		<div class="fakeimg"><img src="images/ejercicios.gif"></div><br>
+
+
+	  </div>
+	  <div id="bordes" class="main">
+
+
+
+
+
+		<h2 >REGISTRATE!</h2>
+		<form action="images/gracias.jpg">
+			<p class="registrando">Nombres*</p>
+			<input class="reposicionar" type="text" required> <br>
+			<p class="registrando">Apellidos*</p>
+			<input class="reposicionar" type="text" required> <br>
+			<p class="registrando">Corrreo*</p>
+			<input class="reposicionar" type="email" required><br>
+			<input id="subir" type="submit" name="Enviar" value="Enviar">
+			<br><br><br><br><br><br><br><br><br><br>
+		</form>
+
+		<form action="images/pendientes.jpg">
+				<p class="registrando">Realiza usted ejercicios?¿Con que frecuencia?</p>
+			Si, siempre<input type="radio" name="frecuency" > <br> <br>
+			Si, con frecuencia<input type="radio" name="frecuency"><br> <br>
+			A veces<input type="radio" name="frecuency"> <br> <br>
+			Solo cuando lo recuerdo<input type="radio" name="frecuency"> <br> <br>
+			Nunca<input type="radio" name="frecuency"> <br> <br> <br> <br>
+
+			<p class="registrando">Ingrese su puntuación, nos importa mucho.</p>
+			5 Estrellas<input type="radio" name="estrellas" > <br> <br>
+			4 Estrellas<input type="radio" name="estrellas"><br> <br>
+			3 Estrellas<input type="radio" name="estrellas"> <br> <br>
+			2 Estrellas<input type="radio" name="estrellas"> <br> <br>
+			1 Esrtrella<input type="radio" name="estrellas"> <br>
+			<input id="subir" type="submit" name="Enviar" value="Enviar">
+			<br><br><br>
+		</form>
+
+		<br><br><br>
+
+		<form action="images/pendientes.jpg">
+			<p class="registrando">Tiene usted alguna pregunta o comentario? </p>
+			<input id="consulta" type="text" name="preguntas"  > <br> <br>
+			<input id="subir" type="submit" name="Enviar" value="Enviar">
+			</form>
+
+		<br><br><br><br>
+
+
+
+</div>
+
+
+	</div>
+
+	  </div>
+
+
+	<!-- Footer -->
+	<footer>
+		<p id="text-footer">HealthFood All Rights Reserved</p>
+	</footer>
+
+</body>
+</html>
